@@ -1,22 +1,95 @@
 .robot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px;
 }
 
 .robot-face-shape {
+    z-index: 1;
+    width: 400px;
+    height: 400px;
+    background-color: #ffcc00;
+    border-radius: 35%;
+    position: relative;
+    /* padding-top: 200px; */
 }
 
 .robot-eye-left {
+    z-index: 2;
+    width: 80px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 25%;
+    position: absolute;
+    top: 60px;
+    left: 50px;
 }
 
 .robot-eye-right {
+    z-index: 2;
+    width: 80px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 25%;
+    position: absolute;
+    top: 60px;
+    right: 50px;
 }
 
 .robot-ear-left {
+    z-index: 0;
+  --s: 130deg;  /* starting angle */
+  --p: 280deg; /* filling angle */
+
+  height: 250px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #851560;
+  /* switch #0000 and #000 to get the opposite shape */
+  mask: conic-gradient(from var(--s),#0000,#000 1deg var(--p),#0000 calc(var(--p) + 1deg));
+  position: absolute;
+  /* margin: 100px; */
+  right: 800px;
+  bottom: 5px;
+  scale: 0.4;
 }
 
 .robot-ear-right {
+    z-index: 0;
+  --s: -50deg;  /* starting angle */
+  --p: 280deg; /* filling angle */
+
+  height: 250px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #851560;
+  /* switch #0000 and #000 to get the opposite shape */
+  mask: conic-gradient(from var(--s),#0000,#000 1deg var(--p),#0000 calc(var(--p) + 1deg));
+  position: absolute;
+  /* margin: 100px; */
+  right: 310px;
+  bottom: 5px;
+  scale: 0.4;
 }
 
 .robot-nose {
+    z-index: 3;
+    position: relative;
+    /* background: #851560; */
+    scale: 0.35;
+    top: 50px;
+    left: 90px;
+    /* width: 80px; */
+    /* height: 80px; */
+
+  --r: 50px; /* cut size */
+  height: 180px;
+  aspect-ratio: 1.2;
+  border-radius: 20px;
+  background: #F07818;
+  mask: radial-gradient(var(--r) at var(--r),#0000 calc(100% - 1px),#000) calc(-1*var(--r));
 }
 
 .robot-teeth {
