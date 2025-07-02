@@ -51,13 +51,16 @@
 /* Eyes */
 .robot-eye-left,
 .robot-eye-right {
+    z-index: 2;
     position: absolute;
     top: 80px;
     width: 80px;
     height: 40px;
-    background-color: #fff;
+    /* background-color: rgba(255, 255, 255, 0.6); */
+    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.2)));
     border-radius: 25%;
-    z-index: 2;
+    border: solid 1px rgba(165, 165, 165, 0.534);
+    
 }
 .robot-eye-left {
     left: 70px;
@@ -68,6 +71,7 @@
 
 /* Nose */
 .robot-nose {
+    z-index: 3;
     position: absolute;
     top: 160px;
     left: calc(50% - 30px);
@@ -75,14 +79,16 @@
     width: 60px;
     height: 90px;
     border-radius: 20px;
-    background: #F07818;
-    z-index: 3;
+    border: solid 1px rgba(189, 99, 25, 0.589);
+    /* background: #F07818; */
+    background-image: linear-gradient(180deg, #ff7300 0%, #b65200 50%, #4b2c00 100%);
+    
 
     --r: 10px; /* cut size */
   /* height: 180px; */
   aspect-ratio: 1.2;
   border-radius: 20px;
-  background: #F07818;
+  /* background: #F07818; */
   mask: radial-gradient(var(--r) at var(--r),#0000 calc(100% - 1px),#000) calc(-1*var(--r));
 }
 
