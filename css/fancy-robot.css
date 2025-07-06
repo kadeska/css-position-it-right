@@ -57,7 +57,12 @@
     width: 80px;
     height: 40px;
     /* background-color: rgba(255, 255, 255, 0.6); */
-    background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.2)));
+    background-image: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.6) 0%,
+        rgba(255, 255, 255, 0.2) 100%
+    );
+    /* (linear, left top, right bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.2))); */
     border-radius: 25%;
     border: solid 1px rgba(165, 165, 165, 0.534);
     
@@ -81,7 +86,8 @@
     border-radius: 20px;
     border: solid 1px rgba(189, 99, 25, 0.589);
     /* background: #F07818; */
-    background-image: linear-gradient(180deg, #ff7300 0%, #b65200 50%, #4b2c00 100%);
+    /* background-image: linear-gradient(180deg, #ff7300 0%, #b65200 50%, #4b2c00 100%); */
+    background-image: url('https://picsum.photos/seed/picsum/200/300');
     
 
     --r: 10px; /* cut size */
